@@ -36,7 +36,7 @@ public class ParamsTest {
         assertEquals(expected, taxAmount);
     }
 
-    @CsvFileSource(resources = "/test-input.csv")
+    @CsvFileSource(resources = "/test-input.csv", numLinesToSkip = 1)
     @ParameterizedTest
     void printCsv(int taxRate, int expected) {
         System.out.println("CSV taxRate = " + taxRate + " expected = " + expected);
